@@ -33,5 +33,11 @@
     "url": "git://github.com/marcelo/core.git"
   },
   "author": "marcelo",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "grunt-mocha-test": "~0.11.0",
+    "sinon": "~1.10.3",
+    "assert": "~1.1.1"
+  }
 }
