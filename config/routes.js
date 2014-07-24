@@ -22,12 +22,15 @@
 
 module.exports.routes = {
 
-
+  '/:lang/*': function(req, res, next) {
+        res.setLocale(req.param('lang') || sails.config.i18n.defaultLocale); 
+        return next();
+  },
   // Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, etc. depending on your
   // default view engine) your home page.
   //
   // (Alternatively, remove this and add an `index.html` file in your `assets` directory)
-  '/': {
+  '/:lang/': {
     view: 'homepage'
   },
 
